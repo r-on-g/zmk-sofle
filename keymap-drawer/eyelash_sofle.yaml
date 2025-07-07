@@ -44,8 +44,8 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - Z
   - X
-  - C
-  - V
+  - '&td_copy'
+  - '&td_paste'
   - $$mdi:arrow-right-bold$$
   - B
   - N
