@@ -70,6 +70,21 @@
 
         #binding-cells = <2>;
         tapping-term-ms = <250>;
+        flavor = "tap-preferred";
+    };
+
+    td_copy: td_copy {
+        compatible = "zmk,behavior-tap-dance";
+        label = "tap_dance_copy";
+        #binding-cells = <0>;
+        bindings = <&kp C>, <&kp K_COPY>;
+    };
+
+    td_paste: td_paste {
+        compatible = "zmk,behavior-tap-dance";
+        label = "tap_dance_paste";
+        #binding-cells = <0>;
+        bindings = <&kp V>, <&kp K_PASTE>;
     };
 
     behaviors {
@@ -83,7 +98,7 @@
 &kp ESC           &kp N1           &kp N2           &kp N3             &kp N4               &kp N5                &kp UP_ARROW     &kp N6           &kp N7                &kp N8              &kp N9           &kp N0               &kp BACKSPACE
 &kp TAB           &kp Q            &kp W            &kp E              &kp R                &mt_long_delay Y T    &kp DOWN_ARROW   &kp Y            &kp U                 &kp I               &kp O            &kp P                &kp BSLH
 &kp LEFT_SHIFT    &hml LEFT_WIN A  &hml LEFT_ALT S  &hml LEFT_SHIFT D  &hml LEFT_CONTROL F  &kp G                 &kp LEFT_ARROW   &kp H            &hmr RIGHT_CONTROL J  &hmr RIGHT_SHIFT K  &hmr LEFT_ALT L  &hmr RIGHT_WIN SEMI  &kp APOS
-&kp LEFT_CONTROL  &trans           &kp Z            &kp X              &kp C                &kp V                 &kp RIGHT_ARROW  &kp B            &kp N                 &kp M               &kp COMMA        &kp DOT              &kp FSLH
+&kp LEFT_CONTROL  &trans           &kp Z            &kp X              &td_copy             &td_paste             &kp RIGHT_ARROW  &kp B            &kp N                 &kp M               &kp COMMA        &kp DOT              &kp FSLH
 &kp C_MUTE        &kp CAPSLOCK     &kp LEFT_GUI     &kp LEFT_ALT       &lt 1 SPACE          &kp LEFT_SHIFT        &kp ENTER        &kp RIGHT_SHIFT  &kp ENTER             &lt 2 ENTER         &trans           &trans
             >;
 
