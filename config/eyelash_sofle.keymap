@@ -77,14 +77,14 @@
         compatible = "zmk,behavior-tap-dance";
         label = "tap_dance_copy";
         #binding-cells = <0>;
-        bindings = <&kp C>, <&kp K_COPY>;
+        bindings = <&kp C>, <&kp LC(C)>;
     };
 
     td_paste: td_paste {
         compatible = "zmk,behavior-tap-dance";
         label = "tap_dance_paste";
         #binding-cells = <0>;
-        bindings = <&kp V>, <&kp K_PASTE>;
+        bindings = <&kp V>, <&kp LC(V)>;
     };
 
     behaviors {
