@@ -108,11 +108,11 @@
 
         layer_1 {
             bindings = <
-&kp GRAVE   &kp F1           &kp F2          &kp F3           &kp F4           &kp F5             &mmv MOVE_UP     &kp F6                   &kp F7           &kp F8      &kp F9     &kp F10           &kp DELETE
-&trans      &trans           &trans          &kp UP           &trans           &trans             &mmv MOVE_DOWN   &kp PG_UP                &kp HOME         &kp UP      &kp END    &kp MINUS         &kp EQUAL
-&trans      &trans           &kp LEFT        &kp DOWN         &kp RIGHT        &trans             &mmv MOVE_LEFT   &kp PG_DN                &kp LEFT         &kp DOWN    &kp RIGHT  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&trans      &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI    &mmv MOVE_RIGHT  &rgb_ug RGB_BRI          &rgb_ug RGB_BRD  &trans      &kp F11    &kp F12           &trans
-&kp C_MUTE  &trans           &trans          &trans           &trans           &kp C_SLEEP        &mkp LCLK        &mt C_MUTE C_PLAY_PAUSE  &kp C_PREVIOUS   &kp C_NEXT  &trans     &trans
+&kp GRAVE   &kp F1           &kp F2          &kp F3           &kp F4           &kp F5             &mmv MOVE_UP     &kp F6                   &kp F7          &kp F8      &kp F9    &kp F10           &kp DELETE
+&trans      &trans           &trans          &kp UP           &trans           &trans             &mmv MOVE_DOWN   &kp PG_UP                &trans          &trans      &kp HOME  &kp MINUS         &kp EQUAL
+&trans      &trans           &kp LEFT        &kp DOWN         &kp RIGHT        &trans             &mmv MOVE_LEFT   &kp PG_DN                &kp RCTRL       &kp RSHFT   &kp END   &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&trans      &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI    &mmv MOVE_RIGHT  &trans                   &trans          &trans      &trans    &trans            &trans
+&kp C_MUTE  &trans           &trans          &trans           &trans           &trans             &mkp LCLK        &mt C_MUTE C_PLAY_PAUSE  &kp C_PREVIOUS  &kp C_NEXT  &trans    &trans
             >;
 
             display-name = "Layer 1";
