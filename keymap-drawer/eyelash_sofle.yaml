@@ -19,7 +19,7 @@ layers:
   - W
   - E
   - R
-  - {t: T, h: Y}
+  - T
   - $$mdi:arrow-down-bold$$
   - Y
   - U
@@ -214,7 +214,7 @@ layers:
   - W
   - E
   - R
-  - {t: T, h: Y}
+  - T
   - {t: '$$mdi:transfer$$', type: trans}
   - Y
   - U
@@ -236,11 +236,11 @@ layers:
   - {t: ;, s: ':'}
   - {t: '''', s: '"'}
   - $$mdi:apple-keyboard-control$$
-  - {t: '$$mdi:transfer$$', type: trans}
   - Z
   - X
   - C
   - V
+  - B
   - {t: '$$mdi:transfer$$', type: trans}
   - B
   - N
@@ -249,11 +249,11 @@ layers:
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:apple-keyboard-option$$
+  - $$mdi:apple-keyboard-option$$
   - $$mdi:keyboard-space$$
-  - P
+  - {t: P, h: Y}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:keyboard-return$$', type: enter}
