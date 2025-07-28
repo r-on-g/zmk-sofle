@@ -90,13 +90,6 @@
         tapping-term-ms = <180>;
     };
 
-    td_layer1: td_layer1 {
-        compatible = "zmk,behavior-tap-dance";
-        label = "tap_dance_space_layer1";
-        #binding-cells = <0>;
-        bindings = <&kp SPACE>, <&to 1>;
-    };
-
     td_cut: td_cut {
         compatible = "zmk,behavior-tap-dance";
         label = "tap_dance_cut";
@@ -127,7 +120,7 @@
 &kp TAB           &kp Q            &kp W            &kp E              &kp R                &kp T        &kp DOWN_ARROW   &kp Y            &kp U                 &kp I               &kp O            &kp P                &kp BSLH
 &kp LEFT_SHIFT    &hml LEFT_WIN A  &hml LEFT_ALT S  &hml LEFT_SHIFT D  &hml LEFT_CONTROL F  &kp G        &kp LEFT_ARROW   &kp H            &hmr RIGHT_CONTROL J  &hmr RIGHT_SHIFT K  &hmr LEFT_ALT L  &hmr RIGHT_WIN SEMI  &kp APOS
 &kp LEFT_CONTROL  &trans           &td_undo         &td_cut            &td_copy             &td_paste    &kp RIGHT_ARROW  &kp B            &kp N                 &kp M               &kp COMMA        &kp DOT              &kp FSLH
-&kp C_MUTE        &kp CAPSLOCK     &kp LEFT_GUI     &kp LEFT_ALT       &lt 1 SPACE          &to 1        &kp ENTER        &kp RIGHT_SHIFT  &kp ENTER             &lt 2 ENTER         &trans           &to 3
+&kp C_MUTE        &kp CAPSLOCK     &kp DELETE       &kp LEFT_ALT       &lt 1 SPACE          &to 1        &kp ENTER        &kp RIGHT_SHIFT  &kp ENTER             &lt 2 ENTER         &trans           &to 3
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -136,11 +129,11 @@
 
         layer_1 {
             bindings = <
-&kp GRAVE   &kp F1           &kp F2          &kp F3           &kp F4           &kp F5             &mmv MOVE_UP     &kp F6                   &kp F7          &kp F8      &kp F9     &kp F10  &kp BSPC
-&trans      &trans           &kp HOME        &kp UP           &kp END          &kp PG_UP          &mmv MOVE_DOWN   &kp PG_UP                &trans          &trans      &kp HOME   &trans   &kp DEL
-&trans      &trans           &kp LEFT        &kp DOWN         &kp RIGHT        &kp PG_DN          &mmv MOVE_LEFT   &kp PG_DN                &kp RCTRL       &kp RSHFT   &kp END    &trans   &trans
-&trans      &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI    &mmv MOVE_RIGHT  &kp LC(V)                &kp LC(C)       &kp LC(X)   &kp LC(Z)  &trans   &trans
-&kp C_MUTE  &trans           &trans          &trans           &trans           &to 0              &mkp LCLK        &mt C_MUTE C_PLAY_PAUSE  &kp C_PREVIOUS  &kp C_NEXT  &trans     &trans
+&kp GRAVE   &kp F1           &kp F2          &kp F3           &kp F4           &kp F5             &mmv MOVE_UP     &kp F6                   &kp F7          &kp F8      &kp F9        &kp F10        &kp BSPC
+&trans      &trans           &kp HOME        &kp UP           &kp END          &kp PG_UP          &mmv MOVE_DOWN   &trans                   &trans          &trans      &trans        &trans         &kp DEL
+&trans      &trans           &kp LEFT        &kp DOWN         &kp RIGHT        &kp PG_DN          &mmv MOVE_LEFT   &trans                   &kp RCTRL       &kp RSHFT   &kp LEFT_ALT  &kp RIGHT_WIN  &trans
+&trans      &rgb_ug RGB_OFF  &rgb_ug RGB_ON  &rgb_ug RGB_EFF  &rgb_ug RGB_HUD  &rgb_ug RGB_HUI    &mmv MOVE_RIGHT  &kp LC(V)                &kp LC(C)       &kp LC(X)   &kp LC(Z)     &trans         &trans
+&kp C_MUTE  &trans           &trans          &trans           &trans           &to 0              &mkp LCLK        &mt C_MUTE C_PLAY_PAUSE  &kp C_PREVIOUS  &kp C_NEXT  &trans        &trans
             >;
 
             display-name = "Navigation";
@@ -163,11 +156,11 @@
 
         layer_3 {
             bindings = <
-&kp ESC    &kp N1     &kp N2    &kp N3    &kp N4     &kp N5     &trans  &kp N6  &kp N7   &kp N8   &kp N9     &kp N0    &kp BSPC
-&kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T      &trans  &kp Y   &kp U    &kp I    &kp O      &kp P     &kp BSLH
-&kp LSHFT  &kp A      &kp S     &kp D     &kp F      &kp G      &trans  &kp H   &kp J    &kp K    &kp L      &kp SEMI  &kp SQT
-&kp LCTRL  &kp Z      &kp X     &kp C     &kp V      &kp B      &trans  &kp B   &kp N    &kp M    &kp COMMA  &kp DOT   &kp FSLH
-&trans     &kp ENTER  &kp LALT  &kp LALT  &kp SPACE  &mt Y P    &trans  &trans  &kp RET  &kp RET  &trans     &to 0
+&kp ESC    &kp N1     &kp N2    &kp N3    &kp N4     &kp N5     &trans  &kp N6            &kp N7      &kp N8      &kp N9     &kp N0    &kp BSPC
+&kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T      &trans  &kp Y             &kp U       &kp I       &kp O      &kp P     &kp BSLH
+&kp LSHFT  &kp A      &kp S     &kp D     &kp F      &kp G      &trans  &kp H             &kp J       &kp K       &kp L      &kp SEMI  &kp SQT
+&kp LCTRL  &kp Z      &kp X     &kp C     &kp V      &kp B      &trans  &kp B             &kp N       &kp M       &kp COMMA  &kp DOT   &kp FSLH
+&trans     &kp ENTER  &kp LALT  &kp LALT  &kp SPACE  &mt Y P    &trans  &kp C_PLAY_PAUSE  &kp C_PREV  &kp C_NEXT  &trans     &to 0
             >;
 
             label = "Gaming";
