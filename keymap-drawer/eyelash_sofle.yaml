@@ -41,7 +41,7 @@ layers:
   - {t: ;, h: RIGHT WIN, s: ':'}
   - {t: '''', s: '"'}
   - $$mdi:apple-keyboard-control$$
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:keyboard-return$$', type: enter}
   - '&td_undo'
   - '&td_cut'
   - '&td_copy'
@@ -106,11 +106,11 @@ layers:
   - RIGHT WIN
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - RGB OFF
-  - RGB ON
-  - RGB EFF
-  - RGB HUD
-  - RGB HUI
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: PLAY PAUSE, h: '$$mdi:volume-off$$'}
+  - PREVIOUS
+  - $$mdi:skip-next$$
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - Ctl+V
   - Ctl+C
@@ -125,9 +125,9 @@ layers:
   - {type: held}
   - {t: Base, h: toggle}
   - $$mdi:mouse-left-click-outline$$
-  - {t: PLAY PAUSE, h: '$$mdi:volume-off$$'}
-  - PREVIOUS
-  - $$mdi:skip-next$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   Symbol:
