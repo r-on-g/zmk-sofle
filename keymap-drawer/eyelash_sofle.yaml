@@ -41,11 +41,11 @@ layers:
   - {t: ;, h: RIGHT WIN, s: ':'}
   - {t: '''', s: '"'}
   - $$mdi:apple-keyboard-control$$
-  - {t: '$$mdi:keyboard-return$$', type: enter}
-  - '&td_undo'
-  - '&td_cut'
-  - '&td_copy'
-  - '&td_paste'
+  - {t: Z, h: Ctl+Z}
+  - {t: X, h: Ctl+X}
+  - {t: C, h: Ctl+C}
+  - {t: V, h: Ctl+V}
+  - B
   - $$mdi:arrow-right-bold$$
   - B
   - N
@@ -54,7 +54,7 @@ layers:
   - {t: ., s: '>'}
   - {t: /, s: '?'}
   - $$mdi:volume-off$$
-  - $$mdi:apple-keyboard-caps$$
+  - {t: '$$mdi:keyboard-return$$', h: '$$mdi:apple-keyboard-caps$$'}
   - $$mdi:backspace-reverse-outline$$
   - $$mdi:apple-keyboard-option$$
   - {t: '$$mdi:keyboard-space$$', h: Nav}
