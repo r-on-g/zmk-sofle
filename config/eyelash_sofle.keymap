@@ -116,11 +116,11 @@
 
         layer_0 {
             bindings = <
-&kp ESC           &kp N1              &kp N2           &kp N3             &kp N4               &kp N5    &kp UP_ARROW     &kp N6           &kp N7                &kp N8              &kp N9           &kp N0               &kp BACKSPACE
-&kp TAB           &kp Q               &kp W            &kp E              &kp R                &kp T     &kp DOWN_ARROW   &kp Y            &kp U                 &kp I               &kp O            &kp P                &kp BSLH
-&kp LEFT_SHIFT    &hml LEFT_WIN A     &hml LEFT_ALT S  &hml LEFT_SHIFT D  &hml LEFT_CONTROL F  &kp G     &kp LEFT_ARROW   &kp H            &hmr RIGHT_CONTROL J  &hmr RIGHT_SHIFT K  &hmr LEFT_ALT L  &hmr RIGHT_WIN SEMI  &kp APOS
-&kp LEFT_CONTROL  &mt_tp LC(Z) Z      &mt_tp LC(X) X   &mt_tp LC(C) C     &mt_tp LC(V) V       &kp B     &kp RIGHT_ARROW  &kp B            &kp N                 &kp M               &kp COMMA        &kp DOT              &kp FSLH
-&kp C_MUTE        &mt CAPSLOCK ENTER  &kp DELETE       &kp LEFT_ALT       &lt 1 SPACE          &trans    &kp ENTER        &kp RIGHT_SHIFT  &kp ENTER             &lt 2 ENTER         &trans           &trans
+&kp ESC           &kp N1              &kp N2           &kp N3             &kp N4               &kp N5    &kp UP_ARROW     &kp N6  &kp N7                &kp N8              &kp N9           &kp N0               &kp BACKSPACE
+&kp TAB           &kp Q               &kp W            &kp E              &kp R                &kp T     &kp DOWN_ARROW   &kp Y   &kp U                 &kp I               &kp O            &kp P                &kp BSLH
+&kp LEFT_SHIFT    &hml LEFT_WIN A     &hml LEFT_ALT S  &hml LEFT_SHIFT D  &hml LEFT_CONTROL F  &kp G     &kp LEFT_ARROW   &kp H   &hmr RIGHT_CONTROL J  &hmr RIGHT_SHIFT K  &hmr LEFT_ALT L  &hmr RIGHT_WIN SEMI  &kp APOS
+&kp LEFT_CONTROL  &mt_tp LC(Z) Z      &mt_tp LC(X) X   &mt_tp LC(C) C     &mt_tp LC(V) V       &kp B     &kp RIGHT_ARROW  &kp B   &kp N                 &kp M               &kp COMMA        &kp DOT              &kp FSLH
+&kp C_MUTE        &mt CAPSLOCK ENTER  &kp DELETE       &kp LEFT_ALT       &lt 1 SPACE          &trans    &kp ENTER        &trans  &mo 2                 &kp ENTER           &trans           &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -133,7 +133,7 @@
 &trans      &trans  &kp HOME  &kp UP                   &kp END         &kp PG_UP     &mmv MOVE_DOWN   &trans  &trans     &trans     &trans        &trans         &kp DEL
 &trans      &trans  &kp LEFT  &kp DOWN                 &kp RIGHT       &kp PG_DN     &mmv MOVE_LEFT   &trans  &kp RCTRL  &kp RSHFT  &kp LEFT_ALT  &kp RIGHT_WIN  &trans
 &trans      &trans  &trans    &mt C_MUTE C_PLAY_PAUSE  &kp C_PREVIOUS  &kp C_NEXT    &mmv MOVE_RIGHT  &trans  &kp LC(V)  &kp LC(C)  &kp LC(X)     &kp LC(Z)      &trans
-&kp C_MUTE  &trans  &trans    &trans                   &trans          &to 0         &mkp LCLK        &trans  &trans     &to 1      &to 2         &to 3
+&kp C_MUTE  &trans  &trans    &trans                   &trans          &trans        &mkp LCLK        &to 2   &to 3      &trans     &trans        &to 0
             >;
 
             display-name = "Navigation";
