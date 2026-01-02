@@ -127,7 +127,7 @@ layers:
   - $$mdi:mouse-left-click-outline$$
   - {t: Symbol, h: toggle}
   - {t: Gaming, h: toggle}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: Mac, h: toggle}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: Base, h: toggle}
   Symbol:
@@ -141,8 +141,8 @@ layers:
   - ^
   - '&'
   - '*'
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - (
+  - )
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '`', s: '~'}
   - {t: '$$mdi:transfer$$', type: trans}
