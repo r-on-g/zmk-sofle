@@ -115,7 +115,7 @@
     behaviors {
     };
 
-fs    combos {
+    combos {
         compatible = "zmk,combos";
 
         softoff {
@@ -194,7 +194,7 @@ fs    combos {
 &trans     &kp ENTER  &kp LALT  &kp LALT  &kp SPACE  &mt Y P    &trans  &kp C_PLAY_PAUSE  &kp C_PREV  &kp C_NEXT  &trans     &to 0
             >;
 
-            display-name = "Gamingfs";
+            display-name = "Gaming";
             sensor-bindings = <&scroll_encoder>;
             label = "Gaming";
         };
