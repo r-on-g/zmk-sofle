@@ -165,7 +165,7 @@
             >;
 
             display-name = "Nav";
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
             label = "Nav";
         };
 
@@ -193,7 +193,7 @@
             >;
 
             display-name = "Gaming";
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
             label = "Gaming";
         };
 
@@ -207,7 +207,7 @@
             >;
 
             display-name = "Mac";
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
             label = "Mac";
         };
 
@@ -221,7 +221,7 @@
             >;
 
             display-name = "Mac Nav";
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
             label = "Mac Nav";
         };
     };
