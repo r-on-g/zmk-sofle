@@ -1,5 +1,11 @@
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1200  // 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 25   // 10
+#define WINDOWS 0
+#define WINDOWS_NAV 1
+#define GAMING 2
+#define MAC 3
+#define MAC_NAV 4
+#define SYMBOL 5
 
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
@@ -144,11 +150,11 @@
 
         layer_0 {
             bindings = <
-&kp ESC           &kp N1              &kp N2           &kp N3             &kp N4               &kp N5    &kp UP_ARROW     &kp N6  &kp N7                &kp N8              &kp N9           &kp N0               &kp BACKSPACE
-&kp TAB           &kp Q               &kp W            &kp E              &kp R                &kp T     &kp DOWN_ARROW   &kp Y   &kp U                 &kp I               &kp O            &kp P                &kp BSLH
-&kp LEFT_SHIFT    &hml LEFT_WIN A     &hml LEFT_ALT S  &hml LEFT_SHIFT D  &hml LEFT_CONTROL F  &kp G     &kp LEFT_ARROW   &kp H   &hmr RIGHT_CONTROL J  &hmr RIGHT_SHIFT K  &hmr LEFT_ALT L  &hmr RIGHT_WIN SEMI  &kp APOS
-&kp LEFT_CONTROL  &mt_tp LC(Z) Z      &mt_tp LC(X) X   &mt_tp LC(C) C     &mt_tp LC(V) V       &kp B     &kp RIGHT_ARROW  &kp B   &kp N                 &kp M               &kp COMMA        &kp DOT              &kp FSLH
-&kp C_MUTE        &mt CAPSLOCK ENTER  &kp DELETE       &kp LEFT_ALT       &lt 1 SPACE          &trans    &kp ENTER        &trans  &mo 2                 &kp ENTER           &trans           &trans
+&kp ESC           &kp N1              &kp N2           &kp N3             &kp N4                 &kp N5    &kp UP_ARROW     &kp N6  &kp N7                &kp N8              &kp N9           &kp N0               &kp BACKSPACE
+&kp TAB           &kp Q               &kp W            &kp E              &kp R                  &kp T     &kp DOWN_ARROW   &kp Y   &kp U                 &kp I               &kp O            &kp P                &kp BSLH
+&kp LEFT_SHIFT    &hml LEFT_WIN A     &hml LEFT_ALT S  &hml LEFT_SHIFT D  &hml LEFT_CONTROL F    &kp G     &kp LEFT_ARROW   &kp H   &hmr RIGHT_CONTROL J  &hmr RIGHT_SHIFT K  &hmr LEFT_ALT L  &hmr RIGHT_WIN SEMI  &kp APOS
+&kp LEFT_CONTROL  &mt_tp LC(Z) Z      &mt_tp LC(X) X   &mt_tp LC(C) C     &mt_tp LC(V) V         &kp B     &kp RIGHT_ARROW  &kp B   &kp N                 &kp M               &kp COMMA        &kp DOT              &kp FSLH
+&kp C_MUTE        &mt CAPSLOCK ENTER  &kp DELETE       &kp LEFT_ALT       &lt WINDOWS_NAV SPACE  &trans    &kp ENTER        &trans  &mo SYMBOL            &kp ENTER           &trans           &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -157,11 +163,11 @@
 
         layer_1 {
             bindings = <
-&kp GRAVE   &kp F1  &kp F2    &kp F3                   &kp F4          &kp F5        &mmv MOVE_UP     &kp F6  &kp F7     &kp F8     &kp F9        &kp F10        &kp BSPC
-&trans      &trans  &kp HOME  &kp UP                   &kp END         &kp PG_UP     &mmv MOVE_DOWN   &trans  &trans     &trans     &trans        &trans         &kp DEL
-&trans      &trans  &kp LEFT  &kp DOWN                 &kp RIGHT       &kp PG_DN     &mmv MOVE_LEFT   &trans  &kp RCTRL  &kp RSHFT  &kp LEFT_ALT  &kp RIGHT_WIN  &trans
-&trans      &trans  &trans    &mt C_MUTE C_PLAY_PAUSE  &kp C_PREVIOUS  &kp C_NEXT    &mmv MOVE_RIGHT  &trans  &kp LC(V)  &kp LC(C)  &kp LC(X)     &kp LC(Z)      &trans
-&kp C_MUTE  &trans  &trans    &trans                   &trans          &trans        &mkp LCLK        &to 2   &to 3      &to 4      &trans        &to 0
+&kp GRAVE   &kp F1  &kp F2    &kp F3                   &kp F4          &kp F5        &mmv MOVE_UP     &kp F6      &kp F7      &kp F8     &kp F9        &kp F10        &kp BSPC
+&trans      &trans  &kp HOME  &kp UP                   &kp END         &kp PG_UP     &mmv MOVE_DOWN   &trans      &trans      &trans     &trans        &trans         &kp DEL
+&trans      &trans  &kp LEFT  &kp DOWN                 &kp RIGHT       &kp PG_DN     &mmv MOVE_LEFT   &trans      &kp RCTRL   &kp RSHFT  &kp LEFT_ALT  &kp RIGHT_WIN  &trans
+&trans      &trans  &trans    &mt C_MUTE C_PLAY_PAUSE  &kp C_PREVIOUS  &kp C_NEXT    &mmv MOVE_RIGHT  &trans      &kp LC(V)   &kp LC(C)  &kp LC(X)     &kp LC(Z)      &trans
+&kp C_MUTE  &trans  &trans    &trans                   &trans          &trans        &mkp LCLK        &to SYMBOL  &to GAMING  &to MAC    &trans        &to WINDOWS
             >;
 
             display-name = "Nav";
@@ -171,25 +177,11 @@
 
         layer_2 {
             bindings = <
-&kp TILDE  &kp EXCLAMATION  &kp AT_SIGN       &kp HASH        &kp DOLLAR  &kp PERCENT    &mmv MOVE_UP     &kp CARET          &kp AMPERSAND         &kp ASTERISK           &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
-&kp GRAVE  &trans           &trans            &kp MINUS       &kp PLUS    &trans         &mmv MOVE_DOWN   &trans             &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans                &trans                 &trans
-&trans     &kp LESS_THAN    &kp GREATER_THAN  &kp UNDERSCORE  &kp EQUAL   &trans         &mmv MOVE_LEFT   &kp DOUBLE_QUOTES  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp QUESTION          &kp COLON              &trans
-&trans     &trans           &kp PIPE          &kp BACKSLASH   &kp SLASH   &trans         &mmv MOVE_RIGHT  &kp SINGLE_QUOTE   &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp COMMA             &kp PERIOD             &trans
-&trans     &bt BT_SEL 0     &bt BT_SEL 1      &bt BT_CLR      &trans      &trans         &mkp LCLK        &trans             &trans                &trans                 &trans                &to 0
-            >;
-
-            display-name = "Symbol";
-            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
-            label = "Symbol";
-        };
-
-        layer_3 {
-            bindings = <
-&kp ESC    &kp N1     &kp N2    &kp N3    &kp N4     &kp N5     &trans  &kp N6            &kp N7      &kp N8      &kp N9     &kp N0    &kp BSPC
-&kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T      &trans  &kp Y             &kp U       &kp I       &kp O      &kp P     &kp BSLH
-&kp LSHFT  &kp A      &kp S     &kp D     &kp F      &kp G      &trans  &kp H             &kp J       &kp K       &kp L      &kp SEMI  &kp SQT
-&kp LCTRL  &kp Z      &kp X     &kp C     &kp V      &kp B      &trans  &kp B             &kp N       &kp M       &kp COMMA  &kp DOT   &kp FSLH
-&trans     &kp ENTER  &kp LALT  &kp LALT  &kp SPACE  &mt Y P    &trans  &kp C_PLAY_PAUSE  &kp C_PREV  &kp C_NEXT  &trans     &to 0
+&kp ESC    &kp N1     &kp N2    &kp N3    &kp N4     &kp N5     &trans  &kp N6            &kp N7      &kp N8      &kp N9     &kp N0       &kp BSPC
+&kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T      &trans  &kp Y             &kp U       &kp I       &kp O      &kp P        &kp BSLH
+&kp LSHFT  &kp A      &kp S     &kp D     &kp F      &kp G      &trans  &kp H             &kp J       &kp K       &kp L      &kp SEMI     &kp SQT
+&kp LCTRL  &kp Z      &kp X     &kp C     &kp V      &kp B      &trans  &kp B             &kp N       &kp M       &kp COMMA  &kp DOT      &kp FSLH
+&trans     &kp ENTER  &kp LALT  &kp LALT  &kp SPACE  &mt Y P    &trans  &kp C_PLAY_PAUSE  &kp C_PREV  &kp C_NEXT  &trans     &to WINDOWS  
             >;
 
             display-name = "Gaming";
@@ -197,13 +189,13 @@
             label = "Gaming";
         };
 
-        layer_4 {
+        layer_3 {
             bindings = <
-&kp ESC    &kp N1               &kp N2           &kp N3             &kp N4            &kp N5    &trans  &kp N6  &kp N7            &kp N8              &kp N9           &kp N0                   &kp BSPC
-&kp TAB    &kp Q                &kp W            &kp E              &kp R             &kp T     &trans  &kp Y   &kp U             &kp I               &kp O            &kp P                    &kp BSLH
-&kp LSHFT  &hml LEFT_CONTROL A  &hml LEFT_ALT S  &hml LEFT_SHIFT D  &hml LEFT_GUI F   &kp G     &trans  &kp H   &hmr RIGHT_GUI J  &hmr RIGHT_SHIFT K  &hmr LEFT_ALT L  &hmr RIGHT_CONTROL SEMI  &kp SQT
-&kp LCTRL  &mt_tp K_UNDO Z      &mt_tp K_CUT X   &mt_tp K_COPY C    &mt_tp K_PASTE V  &kp B     &trans  &kp B   &kp N             &kp M               &kp COMMA        &kp DOT                  &kp FSLH
-&trans     &mt CAPSLOCK ENTER   &trans           &trans             &lt 5 SPACE       &trans    &trans  &trans  &trans            &kp ENTER           &trans           &to 0
+&kp ESC    &kp N1               &kp N2           &kp N3             &kp N4             &kp N5    &trans  &kp N6  &kp N7            &kp N8              &kp N9           &kp N0                   &kp BSPC
+&kp TAB    &kp Q                &kp W            &kp E              &kp R              &kp T     &trans  &kp Y   &kp U             &kp I               &kp O            &kp P                    &kp BSLH
+&kp LSHFT  &hml LEFT_CONTROL A  &hml LEFT_ALT S  &hml LEFT_SHIFT D  &hml LEFT_GUI F    &kp G     &trans  &kp H   &hmr RIGHT_GUI J  &hmr RIGHT_SHIFT K  &hmr LEFT_ALT L  &hmr RIGHT_CONTROL SEMI  &kp SQT
+&kp LCTRL  &mt_tp K_UNDO Z      &mt_tp K_CUT X   &mt_tp K_COPY C    &mt_tp K_PASTE V   &kp B     &trans  &kp B   &kp N             &kp M               &kp COMMA        &kp DOT                  &kp FSLH
+&trans     &mt CAPSLOCK ENTER   &trans           &trans             &lt MAC_NAV SPACE  &trans    &trans  &trans  &mo SYMBOL        &kp ENTER           &trans           &to WINDOWS
             >;
 
             display-name = "Mac";
@@ -211,18 +203,32 @@
             label = "Mac";
         };
 
-        layer_5 {
+        layer_4 {
             bindings = <
-&kp GRAVE   &kp F1  &kp F2    &kp F3                   &kp F4          &kp F5        &mmv MOVE_UP     &kp F6  &kp F7         &kp F8           &kp F9        &kp F10            &kp BSPC
-&trans      &trans  &kp HOME  &kp UP                   &kp END         &kp PG_UP     &mmv MOVE_DOWN   &trans  &trans         &trans           &trans        &trans             &kp DEL
-&trans      &trans  &kp LEFT  &kp DOWN                 &kp RIGHT       &kp PG_DN     &mmv MOVE_LEFT   &trans  &kp RIGHT_GUI  &kp RIGHT_SHIFT  &kp LEFT_ALT  &kp RIGHT_CONTROL  &trans
-&trans      &trans  &trans    &mt C_MUTE C_PLAY_PAUSE  &kp C_PREVIOUS  &kp C_NEXT    &mmv MOVE_RIGHT  &trans  &kp LC(V)      &kp LC(C)        &kp LC(X)     &kp LC(Z)          &trans
-&kp C_MUTE  &trans  &trans    &trans                   &trans          &trans        &mkp LCLK        &to 2   &trans         &trans           &trans        &to 0
+&kp GRAVE   &kp F1  &kp F2    &kp F3                   &kp F4          &kp F5        &mmv MOVE_UP     &kp F6      &kp F7         &kp F8           &kp F9        &kp F10            &kp BSPC
+&trans      &trans  &kp HOME  &kp UP                   &kp END         &kp PG_UP     &mmv MOVE_DOWN   &trans      &trans         &trans           &trans        &trans             &kp DEL
+&trans      &trans  &kp LEFT  &kp DOWN                 &kp RIGHT       &kp PG_DN     &mmv MOVE_LEFT   &trans      &kp RIGHT_GUI  &kp RIGHT_SHIFT  &kp LEFT_ALT  &kp RIGHT_CONTROL  &trans
+&trans      &trans  &trans    &mt C_MUTE C_PLAY_PAUSE  &kp C_PREVIOUS  &kp C_NEXT    &mmv MOVE_RIGHT  &trans      &kp LC(V)      &kp LC(C)        &kp LC(X)     &kp LC(Z)          &trans
+&kp C_MUTE  &trans  &trans    &trans                   &trans          &trans        &mkp LCLK        &to SYMBOL  &trans         &trans           &trans        &to WINDOWS
             >;
 
             display-name = "Mac Nav";
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
             label = "Mac Nav";
+        };
+
+        layer_5 {
+            bindings = <
+&kp TILDE  &kp EXCLAMATION  &kp AT_SIGN       &kp HASH        &kp DOLLAR  &kp PERCENT    &mmv MOVE_UP     &kp CARET          &kp AMPERSAND         &kp ASTERISK           &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
+&kp GRAVE  &trans           &trans            &kp MINUS       &kp PLUS    &trans         &mmv MOVE_DOWN   &trans             &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans                &trans                 &trans
+&trans     &kp LESS_THAN    &kp GREATER_THAN  &kp UNDERSCORE  &kp EQUAL   &trans         &mmv MOVE_LEFT   &kp DOUBLE_QUOTES  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp QUESTION          &kp COLON              &trans
+&trans     &trans           &kp PIPE          &kp BACKSLASH   &kp SLASH   &trans         &mmv MOVE_RIGHT  &kp SINGLE_QUOTE   &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp COMMA             &kp PERIOD             &trans
+&trans     &bt BT_SEL 0     &bt BT_SEL 1      &bt BT_CLR      &trans      &trans         &mkp LCLK        &trans             &trans                &trans                 &trans                &to WINDOWS
+            >;
+
+            display-name = "Symbol";
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+            label = "Symbol";
         };
     };
 };
